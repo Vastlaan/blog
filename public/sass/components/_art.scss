@@ -1,0 +1,21 @@
+.art{
+
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+
+    &__section{
+
+        &--main{
+            font-family: $font-montserrat;
+            color:$color-grey;
+            font-weight: 600;
+            font-size: 2rem;
+        }
+
+        &--para{
+            margin:1rem;
+            font-family: $font-opensans;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.popupCookies{
+    position:fixed;
+    bottom:0rem;
+    left:0;
+    z-index: 99;
+
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    width:100%;
+    padding:2rem;
+    background-color: #494d4e;
+    animation: slideUp 1s linear;
+    transition: all 1s; 
+
+    
+
+    p{
+        font-family: $font-opensans;
+        font-size:2rem;
+        letter-spacing: .2rem;
+        color:snow;
+
+        a{
+            text-decoration: none;
+            color:$color-primary;
+            
+        }
+    }
+
+    button{
+        font-family: $font-opensans;
+        border:none;
+        border-radius:3px;
+        background-color: orangered;
+        color:snow;
+        padding:1rem 2.5rem;
+        font-size: 2.5rem;
+        cursor:pointer;
+        transition: all .3s;
+
+        &:hover{
+            background-color: seagreen;
+        }
+        &:focus{
+            outline:none;
+        }
+    }
+}

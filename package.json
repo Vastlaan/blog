@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "it related blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "start:dev": "nodemon index.js",
+    "watch:sass": "node-sass -w public/sass/main.scss public/css/style.css",
+    "dev": " concurrently \"npm:start:dev\" \"npm:watch:sass\" \"live-server public --cors\" "
+  },
+  "author": "michal antczak",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "node-sass": "^4.14.0",
+    "nodemon": "^2.0.3",
+    "pg": "^8.0.3"
+  }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link type='text/css' rel='stylesheet' href='css/style.css' />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;900&family=Open+Sans:wght@300;400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        <link href="https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/fontawesome/fa/css/all.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <nav class='nav'>
+            <div class='nav__logo'>
+                <h1>Michal Antczak <span class='grey'>Tech</span> <span class='brick'>Blog</span></h1>
+            </div>
+            <ul class='nav__list'>
+                <a class='nav__list--item' href='/'> <i class="fas fa-home"></i> Home</a>
+                <a class='nav__list--item' href='https://www.michalantczak.com'>Portfolio</a>
+                <a class='nav__list--item' href='https://www.michalantczak.com#contact'>Contact</a>
+                <a class='nav__list--item' href='/cookies.html'>Privacy</a>
+            </ul>
+        </nav>
+
+        <div class='search'>
+            <form class='search__field' onsubmit="searchArticle(event)">
+                <input type='text' id='searchInput' name='search' onkeypress=""/>
+                <button type='submit'>Search</button>
+            </form>
+           
+            <div class='search__found'></div>
+        </div>
+
+        <header class='header'>
+
+            <i class="fas fa-cog header__cog"></i>
+
+            <div class='header__main'>
+
+                <div class='header__main--info'>
+                    <p>
+                        This Blog has been created for Web Developers who want to gain their knowledge in the field.
+                        I write about newest technologies and tools in unusual configurations. 
+                        There are a lot of online sources to learn from, but most of them are repetative and they quite often skip edge cases.
+                        Here you'll find answers for those hard, niche questions. Happy reading!
+                    </p>
+                    <div class='header__main--info-img'>
+                        <img src='/assets/img/processor.svg' />
+                        <button onClick='scrollToArticles()'>Start</button>
+                    </div>
+                    
+                </div>
+
+            </div>
+            <div class='header__side'>
+                <h1>Popular tags</h1>
+                <ul class='header__side--list'>
+                    <li>#JavaScript</li>
+                    <li>#Nginx</li>
+                    <li>#Linux</li>
+                </ul>
+            </div>
+        </header>
+
+        <section class='articles'>
+            <ul class='articles__header'>
+                <li>
+                    Sort by:
+                    <span>date</span>
+                    <span>votes</span>
+                </li>
+                <li>
+                    Popular:
+                    <span>JavaScript</span>
+                    <span>Nginx</span>
+                </li>
+            </ul>
+
+            <div class='articles__article'>
+                <div class='articles__article--header'>
+                    <div class='articles__article--header-date'>
+                            <i class='fas fa-clock'></i>
+                            Date of submiting:
+                            <span>25-04-2020</span>
+                    </div>
+                </div>
+                <div class='articles__article--title'>
+                    <h6>Connect to Linux Virtual Server via Visual Studio Code on Windows 10 using Secure Shell protocol (SSH) without PuTTY.</h6>
+                </div>
+
+                <div class='articles__article--buttons'>
+                    <div class='articles__article--buttons-read'>
+                        <button onclick="appendArticle('./components/article_1.html','article_1', this)">Read article</button>
+                    </div>
+                    <div class='articles__article--buttons-like'>
+                        <i class='fas fa-heart' onclick='addNewLike("article_1")'></i>
+                        <span id='likes-article_1'></span>
+                    </div>
+                </div>
+                
+                <div class='articles__article--wrapper'>
+                    <div class='articles__article--wrapper-content' id='article_1'>
+
+                    </div>
+                </div>
+
+                <div class='articles__article--tags'>
+                    <p>Tags:</p>
+                    <ul>
+                        <li>#VS Code</li>
+                        <li>#Windows</li>
+                        <li>#Linux</li>
+                        <li>#SSH</li>
+                    </ul>
+
+                </div>              
+            </div>
+
+        </section>
+
+        <div class='popupCookies'>
+            <p>
+                Deze website maakt gebruik van cookies om jou de best mogelijke ervaring te geven op deze website. 
+                <a href='/cookies.html'> Klik hier voor meer info</a>
+            </p> 
+            <button onClick='hidePopupCookies()'>Ok, Prima!</button>
+        </div>
+
+        <script type='text/javascript' src='./scripts/script.js'></script>
+        <script type='text/javascript' src='./scripts/appendArticle.js'></script>
+    </body>
+</html>

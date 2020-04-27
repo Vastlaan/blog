@@ -1,0 +1,46 @@
+.poster{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid currentColor;
+    border-radius: 5px;
+    animation:showUp .6s ease-out;
+
+    &__header{
+        width:100%;
+        display: flex;
+        padding:1rem;
+        background-color: currentColor;
+
+        i{
+
+        }
+
+        h3{
+            font-family: $font-tech;
+            font-size: 2rem;
+            font-weight: 300;
+            color:black;
+
+        }
+
+    }
+
+    &__content{
+        padding:1rem;
+        position:relative;
+
+        img{
+            width:10rem;
+            float:left;
+        }
+
+        p{
+            display:inline;
+            text-align: right;
+            font-family: $font-opensans;
+            font-size: 1.4rem;
+            color:black;
+        }
+    }
+
+}

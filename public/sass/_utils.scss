@@ -1,0 +1,29 @@
+.gold{
+    color:gold;
+}
+.brick{
+    color:$color-secondary;
+}
+.green{
+    color:$color-tertiary;
+}
+.blue{
+    color:$color-primary;
+}
+.grey{
+    color:$color-grey;
+}
+
+//applied for article
+//steps
+.stepsList{
+    list-style: none;
+    background-color: rgba($color-gold,.3);
+    margin:1rem 2rem;
+    padding:1rem;
+    font-family: $font-tech;
+
+    li{
+        margin:1rem;
+    }
+}
