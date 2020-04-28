@@ -3,6 +3,7 @@ const path = require('path')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const pg = require('pg')
+const keys = require('./config/keys')
 
 
 const app = express()
@@ -13,11 +14,11 @@ app.use(bodyParser.json())
 const Pool = pg.Pool
 
 const pool = new Pool({
-    user:"blog",
-    host:"localhost",
-    password:"natuurlijk",
-    database:"blog",
-    port:5432
+    user:keys.DATABASE_USER,
+    host:keys.DATABASE_HOST,
+    password:keys.DATABASE_PASSWORD,
+    database:keys.DATABASE_NAME,
+    port:keys.DATABASE_PORT
 })
 
 app.use(express.static('public'))
